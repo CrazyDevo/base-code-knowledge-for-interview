@@ -1,4 +1,4 @@
-package api_review;
+package api_review.week01;
 
 public class ConfigurationReader {
 
