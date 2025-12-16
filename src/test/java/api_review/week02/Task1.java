@@ -1,7 +1,9 @@
 package api_review.week02;
 
+import api_review.week02.pojos.Product;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -16,7 +18,8 @@ public class Task1 {
     public void setUp() {
         RestAssured.baseURI="https://fakestoreapi.com";
          requestSpecification= RestAssured.given()
-                .accept(ContentType.JSON);
+                .accept(ContentType.JSON)
+         ;
     }
 
     @Test
@@ -68,4 +71,29 @@ You will change your basic token
     }
 }
      */
+
+
+    @Test
+    public void testCreateProduct() {
+        String expectedTitle="title";
+Product product = new Product(1,expectedTitle,1.1,"desc","cat","http://test.com");
+        Response post = requestSpecification
+                .contentType(ContentType.JSON)
+                .body(product)
+                .when()
+                .post("/products");
+
+        post.prettyPrint();
+        System.out.println("post.statusCode() = " + post.statusCode());
+        String actualTitle = post.jsonPath().getString("title");
+        Assert.assertEquals(post.statusCode(),201); // if it fails rest we will not check
+        // if you use soft assertion then you will check all assertions at the end yuo will see the all results
+        Assert.assertEquals(actualTitle,expectedTitle);
+
+        Headers headers = post.headers();
+        boolean hasHeaderWithName = headers.hasHeaderWithName("Content-Type");
+        Assert.assertTrue(hasHeaderWithName);
+
+
+    }
 }
