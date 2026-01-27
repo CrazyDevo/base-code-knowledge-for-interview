@@ -5,7 +5,7 @@ public class Timer {
 
     public static void main(String[] args) {
 
-        int timer=90;
+        int timer=180;
 
 
 

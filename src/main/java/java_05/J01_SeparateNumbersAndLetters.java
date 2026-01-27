@@ -1,6 +1,6 @@
 package java_05;
 
-public class SeparateNumbersAndLetters {
+public class J01_SeparateNumbersAndLetters {
 
 
     public static void main(String[] args) {
@@ -10,7 +10,6 @@ public class SeparateNumbersAndLetters {
 
 
         separateString(input);
-
 
 
     }
@@ -33,15 +32,12 @@ public class SeparateNumbersAndLetters {
 
             }
 
-
         }
-
         //System.out.println("Numbers: " + numbers.toString());
         //System.out.println("Letters: " + letters.toString());
 
         System.out.println("Numbers: " + numbers);
         System.out.println("Letters: " + letters);
-
 
 
     }
