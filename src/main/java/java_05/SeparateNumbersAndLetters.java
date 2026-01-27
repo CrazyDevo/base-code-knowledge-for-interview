@@ -16,22 +16,31 @@ public class SeparateNumbersAndLetters {
     }
 
     private static void separateString(String input) {
-        StringBuilder letters=new StringBuilder();
-        StringBuilder numbers=new StringBuilder();
+      //  StringBuilder letters=new StringBuilder();
+       // StringBuilder numbers=new StringBuilder();
+
+        String letters="";
+        String numbers="";
 
         for (char c : input.toCharArray()) {
+
             if (Character.isDigit(c)) {
-                numbers.append(c);
+                numbers += c;
+              //  numbers.append(c);
             } else if (Character.isLetter(c)) {
-                letters.append(c);
+                letters += c;
+              //  letters.append(c);
 
             }
 
 
         }
 
-        System.out.println("Numbers: " + numbers.toString());
-        System.out.println("Letters: " + letters.toString());
+        //System.out.println("Numbers: " + numbers.toString());
+        //System.out.println("Letters: " + letters.toString());
+
+        System.out.println("Numbers: " + numbers);
+        System.out.println("Letters: " + letters);
 
 
 
