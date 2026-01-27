@@ -10,6 +10,8 @@ public class J02_SeparateNumbersAndLettersInArray {
 
         String[] arr = {"1","a","2","b","3","c"};
 
+        Character[] arr1 = {'1','a','2','b','3','c'};
+
         System.out.println(separateString(arr));
 
 
