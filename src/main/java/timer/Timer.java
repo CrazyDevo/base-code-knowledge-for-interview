@@ -1,4 +1,4 @@
-package java_04;
+package timer;
 
 public class Timer {
 
