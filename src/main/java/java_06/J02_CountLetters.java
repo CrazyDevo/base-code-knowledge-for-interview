@@ -1,7 +1,12 @@
 package java_06;
 
 public class J02_CountLetters {
+/*
+Write a method that counts how many letters exist in a given String.
 
+Input: "Java123"
+Output: 4
+ */
     public static void main(String[] args) {
         String str="Java123";
 

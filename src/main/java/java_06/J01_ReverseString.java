@@ -2,7 +2,12 @@ package java_06;
 
 public class J01_ReverseString {
 
+/*
+Write a method that reverses a given String.
 
+Input: "Java"
+Output: "avaJ"
+ */
     public static void main(String[] args) {
 
         String str="Java";
